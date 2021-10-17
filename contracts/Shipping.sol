@@ -16,8 +16,9 @@ contract Shipping{
 
     function Delivered() public {
         status = ShippingStatus.Delivered;
+        emit LogNewAlert("Your package has arrived");
     }
-    
+
      // Function to get the status of the shipping
     function getStatus(ShippingStatus _status) internal pure returns (string memory) {
      // Check the current status and return the correct name
